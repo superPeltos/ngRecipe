@@ -14,6 +14,7 @@ export class RecipeEditComponent implements OnInit {
     editMode = false;
     recipeForm: FormGroup;
 
+
     constructor(private route: ActivatedRoute, private recipeService: RecipeService, private router: Router) {
     }
 
@@ -52,7 +53,7 @@ export class RecipeEditComponent implements OnInit {
         }else{
             this.recipeService.addRecipe(this.recipeForm.value);
         }
-        this.onCancel()
+        this.onCancel();
     }
 
     onCancel() {
